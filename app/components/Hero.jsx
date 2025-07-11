@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-br from-amber-800 to-amber-950 pt-16 lg:pt-4 text-white overflow-hidden min-h-[80vh] flex items-center">
+    <section className="relative bg-gradient-to-br from-amber-800 to-amber-950 pt-24 lg:pt-4 text-white overflow-hidden min-h-[80vh] flex items-center">
       {/* Background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-64 h-64 bg-amber-600 rounded-full mix-blend-multiply filter blur-3xl"></div>
