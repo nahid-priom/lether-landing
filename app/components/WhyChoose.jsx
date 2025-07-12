@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../utils/motion";
 
-
 const WhyChoose = () => {
   const benefits = [
     {
@@ -16,7 +15,7 @@ const WhyChoose = () => {
     },
     {
       title: "Dermatologist Tested & 100% Cosmetic Ingredients",
-      description: "Your family's safety is our priority. Made with 100% cosmetic skincare ingredients and dermatologist tested, ensuring it won't irritate skin.",
+      description: "Your family's safety is our priority. Leather CPR is the only leather care product made with 100% cosmetic skincare ingredients and is dermatologist tested, ensuring it won't irritate skin.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -25,7 +24,7 @@ const WhyChoose = () => {
     },
     {
       title: "Deep Moisturizing Cream, Not a Watery Spray",
-      description: "Our rich cream formula penetrates deep into the leather, restoring its natural suppleness and prolonging its life while reducing scuffs and scratches.",
+      description: "Our rich cream formula penetrates deep into the leather, restoring its natural suppleness and prolonging its life. It effectively reduces the appearance of scuffs and scratches.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
           <path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z" />
@@ -34,7 +33,7 @@ const WhyChoose = () => {
     },
     {
       title: "No Sticky or Greasy Residue",
-      description: "Dries quickly leaving your leather feeling soft, smooth, and natural – never sticky or greasy.",
+      description: "Unlike other products, Leather CPR dries quickly in minutes, leaving your leather feeling soft, smooth, and natural – never sticky or greasy.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z" clipRule="evenodd" />
@@ -42,8 +41,8 @@ const WhyChoose = () => {
       )
     },
     {
-      title: "Versatile for All Leather Types",
-      description: "Safe and effective on furniture, car seats, handbags, jackets, boots, shoes, saddles, and exotic leathers.",
+      title: "Versatile & Effective on Various Leather Types",
+      description: "From furniture and car seats to handbags, jackets, boots, shoes, saddles, and even exotic leathers, Leather CPR is safe and effective on a wide range of leather items.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
           <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
@@ -52,11 +51,11 @@ const WhyChoose = () => {
       )
     },
     {
-      title: "Trusted by Millions",
-      description: "Featured on The Today Show and recommended by Restoration Hardware with millions of bottles sold over 25 years.",
+      title: "Family Made in the USA",
+      description: "Proudly a family-made product, manufactured with care in the USA, ensuring the highest quality standards for over 25 years.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
-          <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7.858 5.485a1 1 0 00-1.715 1.03L7.633 9H7a1 1 0 100 2h1.834l.166.277V12H7a1 1 0 100 2h2v1a1 1 0 102 0v-1h2a1 1 0 100-2h-2v-.723L11.834 11H13a1 1 0 100-2h-.633l1.492-2.486a1 1 0 10-1.716-1.029L10.034 9h-.068L7.858 5.485z" clipRule="evenodd" />
         </svg>
       )
     }
@@ -77,13 +76,16 @@ const WhyChoose = () => {
           className="text-center mb-16"
         >
           <span className="inline-block bg-amber-100 text-amber-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
-            Why Choose Us
+            Superior Leather Care
           </span>
           <h2 className="text-4xl font-bold text-gray-900">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-amber-800">
-              Leather CPR
-            </span> Benefits
+              Why Choose
+            </span> Leather CPR
           </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">
+            More than just a cleaner - a complete leather care solution designed for superior results
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -106,6 +108,17 @@ const WhyChoose = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          variants={fadeIn("up", "spring", 0.8, 1)}
+          className="mt-16 text-center"
+        >
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 inline-block">
+            <p className="text-amber-800 font-medium">
+              "Featured on The Today Show and recommended by Restoration Hardware - trusted by millions for over 25 years"
+            </p>
+          </div>
+        </motion.div>
       </div>
     </motion.section>
   );

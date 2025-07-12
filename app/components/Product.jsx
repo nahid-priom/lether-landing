@@ -1,49 +1,56 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
+import p1 from "../../public/p1.png";
+import p2 from "../../public/p2.png";
+import p3 from "../../public/p3.png";
 
 const products = [
   {
-    name: "Leather CPR Cleaner",
-    description: "All-in-one cleaner & conditioner for all leather types.",
+    name: "Leather CPR Cleaner & Conditioner 18oz",
+    shortDescription: "All-in-one solution for all leather types",
+    fullDescription:
+      "Keep your leather looking its best with Leather CPR Cleaner & Conditioner! This all-in-one solution cleans, restores, and protects everything from your favorite leather couch to handbags, car seats, jackets, and boots. Its gentle formula is safe for all types of leather, making it perfect for quick touch-ups or regular care. Just apply, wipe, and watch your leather stay soft, clean, and protected from dirt and scratches. Whether it's your sofa, shoes, or saddle, Leather CPR makes leather care easy and keeps your items looking like new!",
     highlight: "Bestseller",
-    image: "https://www.leatherworldonline.net/cdn/shop/products/024A7394.jpg?v=1615197798&width=533",
+    image: p1,
+    amazonUrl: "https://www.amazon.com/dp/B00GRT125A?",
   },
   {
-    name: "Leather Protection Spray",
-    description: "UV shield to prevent fading and cracking.",
-    highlight: "New Arrival",
-    image: "https://www.leatherworldonline.net/cdn/shop/products/024A7394.jpg?v=1615197798&width=533",
-  },
-  {
-    name: "Deluxe Care Bundle",
-    description: "Complete leather care solution with premium accessories.",
+    name: "Leather CPR Cleaner and Conditioner Kit",
+    shortDescription: "Complete cleaning & conditioning duo",
+    fullDescription:
+      "Keep your favorite leather items looking brand new with the Leather CPR Cleaner and Conditioner Kit! This 18oz cleaner and 22oz heavy-duty formula work together to gently clean and hydrate leather furniture, car seats, purses, shoes, jackets, and saddles. Made with safe, cosmetic-grade ingredients, it's tough on dirt but gentle on your leather and skin. Simply apply and wipe to restore softness and shine, whether you're refreshing a leather sofa, polishing boots, or caring for a cherished handbag.",
     highlight: "Most Popular",
-    image: "https://www.leatherworldonline.net/cdn/shop/products/024A7394.jpg?v=1615197798&width=533",
+    image: p2,
+    amazonUrl: "https://www.amazon.com/dp/B0DCLSP981?",
   },
   {
-    name: "Leather Quick Wipes",
-    description: "On-the-go cleaning for cars, bags & jackets.",
-    highlight: "Travel Essential",
-    image: "https://www.leatherworldonline.net/cdn/shop/products/024A7394.jpg?v=1615197798&width=533",
-  },
-  {
-    name: "Premium Leather Brush",
-    description: "Gentle bristles for deep cleaning without scratches.",
-    highlight: "Professional Grade",
-    image: "https://www.leatherworldonline.net/cdn/shop/products/024A7394.jpg?v=1615197798&width=533",
-  },
-  {
-    name: "Luxury Gift Set",
-    description: "Perfect present for leather enthusiasts.",
-    highlight: "Limited Edition",
-    image: "https://www.leatherworldonline.net/cdn/shop/products/024A7394.jpg?v=1615197798&width=533",
+    name: "Leather CPR Microfiber Applicator Sponge",
+    shortDescription: "Perfect tool for leather care application",
+    fullDescription:
+      "Make leather care a breeze with the Leather CPR Microfiber Applicator Sponge! This 5-inch round, lint-free microfiber pad is your go-to for applying leather cleaners and conditioners smoothly on car seats, furniture, purses, and more. Its soft, scratch-free design ensures your leather stays pristine while covering large surfaces quickly and evenly. With a handy finger pocket for better grip, it's easy to use and clean, plus it's washable and reusable for long-lasting value. Perfect for anyone who loves keeping their leather looking flawless!",
+    highlight: "Essential Tool",
+    image: p3,
+    amazonUrl: "https://www.amazon.com/dp/B0B9ZP4S4B?",
   },
 ];
 
 const ProductGrid = () => {
+  const [expandedDescriptions, setExpandedDescriptions] = useState({});
+
+  const toggleDescription = (index) => {
+    setExpandedDescriptions((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
   return (
-    <section id="products"  className="py-16 bg-gradient-to-b from-gray-50 to-white">
+    <section
+      id="products"
+      className="py-16 bg-gradient-to-b from-gray-50 to-white"
+    >
       <div className="container mx-auto px-4">
         {/* Eye-catching Title */}
         <motion.div
@@ -58,12 +65,12 @@ const ProductGrid = () => {
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-amber-800">
-              Professional-Grade
+              Our Best
             </span>{" "}
-            Leather Solutions
+            Products
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover our curated collection of leather care essentials
+            Professional solutions to restore and protect your leather items
           </p>
         </motion.div>
 
@@ -79,20 +86,20 @@ const ProductGrid = () => {
                 y: -10,
                 boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.1)",
               }}
-              className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-amber-200 transition-all duration-300 group"
+              className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-amber-200 transition-all duration-300 group flex flex-col"
             >
               {/* Product Image with Floating Badge */}
-              <div className="relative h-72 w-full overflow-hidden">
+              <div className="relative h-96 w-full overflow-hidden">
                 <Image
                   src={product.image}
                   alt={product.name}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="object-contain group-hover:scale-110 transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority={index < 3}
                 />
                 {product.highlight && (
-                  <motion.span 
+                  <motion.span
                     initial={{ scale: 0.9 }}
                     whileHover={{ scale: 1.05 }}
                     className="absolute top-5 right-5 bg-white text-amber-800 text-xs font-bold px-4 py-2 rounded-full shadow-lg border border-amber-100"
@@ -103,23 +110,84 @@ const ProductGrid = () => {
               </div>
 
               {/* Product Details */}
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3 text-gray-900">{product.name}</h3>
-                <p className="text-gray-600 mb-6 min-h-[4rem]">{product.description}</p>
-                <motion.button
-                  whileHover={{ 
-                    backgroundColor: "#b45309", // darker amber-700
-                    scale: 1.02
+              <div className="p-6 flex-grow flex flex-col">
+                <h3 className="text-2xl font-bold mb-3 text-gray-900">
+                  {product.name}
+                </h3>
+
+                <div className="mb-4 flex-grow">
+                  <p className="text-gray-600 mb-2">
+                    {expandedDescriptions[index]
+                      ? product.fullDescription
+                      : product.shortDescription}
+                  </p>
+                  <button
+                    onClick={() => toggleDescription(index)}
+                    className="text-amber-600 hover:text-amber-800 text-sm font-medium transition-colors flex items-center gap-1 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 focus:rounded-sm"
+                  >
+                    {expandedDescriptions[index] ? (
+                      <>
+                        Read Less
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </>
+                    ) : (
+                      <>
+                        Read More
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </>
+                    )}
+                  </button>
+                </div>
+
+                <motion.a
+                  href={product.amazonUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{
+                    backgroundColor: "#b45309",
+                    scale: 1.02,
                   }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-amber-600 text-white py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-3"
+                  className="w-full bg-amber-600 text-white py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-3 mt-auto"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                    />
                   </svg>
-                  Check Price & Details
-                </motion.button>
+                  Check Price
+                </motion.a>
               </div>
             </motion.div>
           ))}

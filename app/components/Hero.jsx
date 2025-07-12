@@ -1,10 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import heroImage from "../../public/hero.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-br from-amber-800 to-amber-950 pt-16 lg:pt-4 text-white overflow-hidden min-h-[80vh] flex items-center">
+    <section className="relative bg-gradient-to-br from-amber-800 to-amber-950 pt-28 lg:pt-12 text-white overflow-hidden min-h-[85vh] flex items-center">
       {/* Background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-64 h-64 bg-amber-600 rounded-full mix-blend-multiply filter blur-3xl"></div>
@@ -14,32 +15,32 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 py-20 md:py-28">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
           {/* Text content - centered on mobile */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="lg:w-1/2 relative z-10 text-center lg:text-left"
           >
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6"
             >
-              Trusted by leather lovers since 1999
+              Premium Leather Care Solution
             </motion.span>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+              className="text-4xl md:text-5xl lg:text-5xl font-bold mb-6 leading-tight"
             >
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-white">
-                Revive Your Leather
+                Leather CPR
               </span>
               <br />
-              Like Magic
+              Cleaner & Conditioner
             </motion.h1>
 
             <motion.p
@@ -48,7 +49,16 @@ const HeroSection = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-xl md:text-2xl mb-8 text-amber-100 mx-auto lg:mx-0 max-w-2xl"
             >
-              The professional-grade solution for tired, worn leather
+              Bring Your Leather Back to Life!
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="text-lg mb-8 text-amber-50 mx-auto lg:mx-0 max-w-2xl"
+            >
+              Restore, Protect, and Revitalize Your Leather in One Easy Step
             </motion.p>
 
             {/* CTA button - centered on mobile */}
@@ -76,7 +86,7 @@ const HeroSection = () => {
                 >
                   <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
                 </svg>
-                Shop Now
+                Revive Your Leather
                 <motion.div
                   animate={{
                     y: [0, 8, 0],
@@ -107,46 +117,27 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Product showcase - visible on mobile */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 50, rotate: -2 }}
             animate={{ opacity: 1, x: 0, rotate: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="w-full lg:w-1/2 relative z-10 cursor-pointer mt-0 lg:mt-10 mt-0"
+            className="w-full lg:w-1/2 pb-6 relative z-10 cursor-pointer mt-0 lg:mt-10"
             onClick={() =>
               document
                 .getElementById("products")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            <div className="relative w-full max-w-lg mx-auto aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 hover:border-amber-400 transition-all duration-300">
-              <motion.div
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  ease: "easeInOut",
-                }}
-                className="relative w-full h-full"
-              >
-                <Image
-                  src="https://makiri.co.nz/cdn/shop/files/fenella_various_1000x.jpg?v=1613563250"
-                  alt="Leather restoration with CPR Cleaner"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 768px) 90vw, 50vw"
-                />
-              </motion.div>
-              <div className="absolute inset-0 bg-gradient-to-t from-amber-950/70 via-transparent to-transparent" />
-
-              {/* Overlay label */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-center bg-gradient-to-t from-black/80 to-transparent">
-                <div className="text-white text-lg font-medium">
-                  Swipe to see how Leather CPR revitalizes worn leather
-                </div>
-              </div>
-            </div>
+            <motion.div className="relative rounded-2xl  w-full h-[420px] lg:h-[500px]">
+              <Image
+                src={heroImage}
+                alt="Leather CPR Cleaner & Conditioner - Restores and protects leather furniture, car seats, jackets and more"
+                fill
+                className="object-contain"
+                priority
+                sizes="(max-width: 768px) 90vw, 50vw"
+              />
+            </motion.div>
           </motion.div>
         </div>
       </div>

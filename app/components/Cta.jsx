@@ -1,78 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "../utils/motion";
-import Image from "next/image";
 
 const CTA = () => {
-  const mediaLogos = [
-    {
-      name: "The Today Show",
-      logo: "/logos/today-show.png" // Replace with actual path
-    },
-    {
-      name: "Restoration Hardware",
-      logo: "/logos/restoration-hardware.png" // Replace with actual path
-    },
-    {
-      name: "Good Morning America",
-      logo: "/logos/gma.png" // Replace with actual path
-    },
-    {
-      name: "Architectural Digest",
-      logo: "/logos/ad.png" // Replace with actual path
-    }
-  ];
+ 
 
   return (
     <div className="relative overflow-hidden">
-      {/* As Seen On Section */}
-      <motion.section
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        className="py-16 bg-gradient-to-b from-white to-gray-50"
-      >
-        <div className="container mx-auto px-4">
-          <motion.div
-            variants={fadeIn("up", "spring", 0.2, 1)}
-            className="text-center mb-12"
-          >
-            <span className="inline-block bg-amber-100 text-amber-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
-              Featured In
-            </span>
-            <h2 className="text-4xl font-bold text-gray-900">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-amber-800">
-                Trusted By
-              </span> The Best
-            </h2>
-          </motion.div>
-
-          <motion.div
-            variants={fadeIn("up", "spring", 0.4, 1)}
-            className="flex flex-wrap justify-center items-center gap-8 md:gap-12"
-          >
-            {mediaLogos.map((media, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all w-40 h-20 flex items-center justify-center"
-              >
-                {/* Replace with actual Image component */}
-                <div className="relative w-full h-full">
-                  <Image
-                    src="https://www.clipartmax.com/png/middle/97-970298_today-show-logo-png.png"
-                    alt={media.name}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </motion.section>
-
+     
       {/* CTA Section */}
       <motion.section
         initial={{ opacity: 0 }}
@@ -106,29 +40,19 @@ const CTA = () => {
               viewport={{ once: true }}
               className="text-xl mb-8"
             >
-              Don't let dull, dirty, or dry leather diminish the beauty of your home or accessories.
-            </motion.p>
-            
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-lg mb-8 font-bold bg-white/10 backdrop-blur-sm inline-block px-6 py-2 rounded-full"
-            >
-              Free domestic shipping on all orders!
+              Don't let dull, dirty, or dry leather diminish the beauty of your home or accessories. Experience the revitalizing power of Leather CPR Cleaner today!
             </motion.p>
             
             <motion.button
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-white text-amber-800 hover:bg-gray-100 font-bold py-4 px-10 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-2 mx-auto"
             >
-              Get Leather CPR Now
+              Order Now
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 className="h-5 w-5"

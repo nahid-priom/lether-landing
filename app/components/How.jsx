@@ -9,8 +9,8 @@ const How = () => {
       title: "Apply",
       description: "Apply a generous amount of Leather CPR Cleaner to a clean, soft cloth or applicator pad.",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
         </svg>
       )
     },
@@ -19,17 +19,17 @@ const How = () => {
       title: "Wipe",
       description: "Gently wipe the product onto the leather surface, working in small sections. You'll see dirt and grime lift away effortlessly.",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
         </svg>
       )
     },
     {
       number: 3,
       title: "Buff",
-      description: "For best results, allow the product to penetrate for a few minutes. Then, buff gently with a clean, dry cloth until the leather is soft and shiny.",
+      description: "For best results, allow the product to penetrate for a few minutes (up to ten minutes for heavily soiled areas). Then, buff gently with a clean, dry cloth until the leather is soft and shiny.",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
         </svg>
       )
@@ -42,7 +42,7 @@ const How = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-100px" }}
-      className="py-16 bg-gradient-to-b from-white to-gray-50"
+      className="py-16 bg-gradient-to-b from-white to-amber-50"
       id="how-it-works"
     >
       <div className="container mx-auto px-4">
@@ -53,13 +53,13 @@ const How = () => {
           <span className="inline-block bg-amber-100 text-amber-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
             Simple Process
           </span>
-          <h2 className="text-4xl font-bold text-gray-900">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-amber-800">
               How It Works
             </span>
           </h2>
-          <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-            Transform your leather in just three easy steps
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Simple Steps to Beautiful Leather - No rinsing, no complicated steps. Just beautiful, revitalized leather.
           </p>
         </motion.div>
 
@@ -68,20 +68,20 @@ const How = () => {
             <motion.div
               key={index}
               variants={fadeIn("up", "spring", index * 0.2 + 0.4, 1)}
-              whileHover={{ y: -8 }}
-              className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all border border-gray-100 text-center group"
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all border border-amber-100 text-center group relative"
             >
-              <div className="relative">
-                <div className="absolute -top-12 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-to-br from-amber-400 to-amber-600 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto text-3xl font-bold shadow-lg group-hover:scale-110 transition-transform">
-                    {step.number}
-                  </div>
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                <div className="bg-gradient-to-br from-amber-500 to-amber-700 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto text-xl font-bold shadow-lg">
+                  {step.number}
                 </div>
               </div>
               
-              <div className="mt-10">
-                <div className="text-amber-600 mb-4 flex justify-center">
-                  {step.icon}
+              <div className="mt-8">
+                <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-amber-200 transition-colors">
+                  <div className="text-amber-700">
+                    {step.icon}
+                  </div>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-amber-700 transition-colors">
                   {step.title}
@@ -93,6 +93,15 @@ const How = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          variants={fadeIn("up", "spring", 0.8, 1)}
+          className="mt-16 text-center bg-amber-50 rounded-xl p-6 max-w-3xl mx-auto border border-amber-200"
+        >
+          <p className="text-amber-800 font-medium">
+            "Transform your leather in just three easy steps - from dull and worn to soft and revitalized!"
+          </p>
+        </motion.div>
       </div>
     </motion.section>
   );

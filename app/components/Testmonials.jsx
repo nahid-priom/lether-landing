@@ -5,22 +5,25 @@ import { fadeIn, staggerContainer } from "../utils/motion";
 const Testimonial = () => {
   const testimonials = [
     {
-      quote: "I can't believe the difference! My old leather couch looks brand new after using Leather CPR. It's so easy to use and the results are amazing.",
+      quote: "I was amazed at how Leather CPR Cleaner & Conditioner revived my old leather couch! Paired with the Microfiber Applicator Sponge, it was so easy to apply evenly. The sponge's soft, lint-free pad glided smoothly, and my couch looks brand new without any sticky residue. It's perfect for my car seats too!",
       author: "Sarah P.",
       role: "Homeowner",
-      stars: 5
+      stars: 5,
+      product: "Cleaner & Sponge Combo"
     },
     {
-      quote: "This is the only leather cleaner I'll ever use. It cleans, conditions, and leaves no sticky residue. My car seats have never looked better.",
-      author: "John D.",
+      quote: "Leather CPR is my go-to for keeping my car seats pristine. The cleaner and conditioner work wonders, and the Microfiber Applicator Sponge makes application a breeze. Its round pad covers large areas quickly, leaving no scratches. My interior looks showroom-fresh, and I love how simple it is to use!",
+      author: "Michelle Samsel",
       role: "Car Enthusiast",
-      stars: 5
+      stars: 5,
+      product: "Cleaner & Conditioner"
     },
     {
-      quote: "As a handbag collector, I'm always looking for the best products to care for my leather bags. Leather CPR is a game-changer.",
+      quote: "As a handbag collector, I trust Leather CPR to care for my leather bags. The cleaner restores their shine, and the Microfiber Applicator Sponge ensures even application without wasting product. It's gentle on my purses and boots, keeping them looking pristine. This duo is a must-have!",
       author: "Emily R.",
       role: "Fashion Blogger",
-      stars: 5
+      stars: 5,
+      product: "Complete Leather Care Kit"
     }
   ];
 
@@ -30,7 +33,7 @@ const Testimonial = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-100px" }}
-      className="py-16 bg-gradient-to-b from-gray-50 to-white"
+      className="py-16 bg-gradient-to-b from-amber-50 to-white"
       id="testimonials"
     >
       <div className="container mx-auto px-4">
@@ -41,13 +44,13 @@ const Testimonial = () => {
           <span className="inline-block bg-amber-100 text-amber-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
             Customer Love
           </span>
-          <h2 className="text-4xl font-bold text-gray-900">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-amber-800">
-              Happy Customers
+              What Our Customers Are Saying
             </span>
           </h2>
-          <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-            Don't just take our word for it - hear from our satisfied customers
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Our Leather CPR products have earned rave reviews from leather care enthusiasts worldwide
           </p>
         </motion.div>
 
@@ -56,8 +59,8 @@ const Testimonial = () => {
             <motion.div
               key={index}
               variants={fadeIn("up", "spring", index * 0.2 + 0.4, 1)}
-              whileHover={{ y: -5 }}
-              className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all border border-gray-100 group"
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all border border-amber-100 group relative"
             >
               <div className="flex mb-4">
                 {[...Array(testimonial.stars)].map((_, i) => (
@@ -73,9 +76,9 @@ const Testimonial = () => {
                 ))}
               </div>
               
-              <blockquote className="text-lg italic text-gray-700 mb-6 relative">
+              <blockquote className="text-lg text-gray-700 mb-6 relative pl-6">
                 <svg 
-                  className="absolute -top-2 -left-2 w-8 h-8 text-amber-100 opacity-70"
+                  className="absolute top-0 left-0 w-6 h-6 text-amber-300"
                   aria-hidden="true" 
                   xmlns="http://www.w3.org/2000/svg" 
                   viewBox="0 0 24 24"
@@ -92,6 +95,7 @@ const Testimonial = () => {
                 <div>
                   <p className="font-bold text-gray-900">{testimonial.author}</p>
                   <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  <p className="text-xs text-amber-600 font-medium mt-1">{testimonial.product}</p>
                 </div>
               </div>
             </motion.div>
