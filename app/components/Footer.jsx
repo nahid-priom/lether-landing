@@ -69,25 +69,20 @@ const Footer = () => {
           className="w-full h-px bg-amber-600 my-8"
         />
 
-        {/* Optional Links */}
+        {/* Contact Email */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-wrap justify-center gap-6 text-sm"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-center"
         >
-          <Link href="#" className="text-amber-200 hover:text-white transition-colors">
-            Privacy Policy
-          </Link>
-          <Link href="#" className="text-amber-200 hover:text-white transition-colors">
-            Terms of Service
-          </Link>
-          <Link href="#" className="text-amber-200 hover:text-white transition-colors">
-            Shipping Policy
-          </Link>
-          <Link href="#" className="text-amber-200 hover:text-white transition-colors">
-            Contact Us
-          </Link>
+          <h3 className="text-lg font-medium mb-2 text-amber-100">Need help? Contact us:</h3>
+          <a 
+            href="mailto:hello@theleathercpr.com" 
+            className="text-amber-200 hover:text-white transition-colors text-xl font-medium"
+          >
+            hello@theleathercpr.com
+          </a>
         </motion.div>
       </div>
     </footer>
