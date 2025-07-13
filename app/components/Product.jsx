@@ -2,9 +2,9 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import p1 from "../../public/p1.png";
-import p2 from "../../public/p2.png";
-import p3 from "../../public/p3.png";
+import p1 from "../../public/p1.jpeg";
+import p2 from "../../public/p2.jpeg";
+import p3 from "../../public/p3.jpeg";
 
 const products = [
   {
@@ -94,7 +94,7 @@ const ProductGrid = () => {
                   src={product.image}
                   alt={product.name}
                   fill
-                  className="object-contain group-hover:scale-110 transition-transform duration-500"
+                  className="object-contain p-10 group-hover:scale-110 transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority={index < 3}
                 />
@@ -102,7 +102,7 @@ const ProductGrid = () => {
                   <motion.span
                     initial={{ scale: 0.9 }}
                     whileHover={{ scale: 1.05 }}
-                    className="absolute top-5 right-5 bg-white text-amber-800 text-xs font-bold px-4 py-2 rounded-full shadow-lg border border-amber-100"
+                    className="absolute top-1 right-0 bg-white text-amber-800 text-xs font-bold px-4 py-2 rounded-full shadow-lg border border-amber-100"
                   >
                     {product.highlight}
                   </motion.span>
@@ -172,20 +172,7 @@ const ProductGrid = () => {
                   whileTap={{ scale: 0.98 }}
                   className="w-full bg-amber-600 text-white py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-3 mt-auto"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
-                  </svg>
+                  
                   Check Price
                 </motion.a>
               </div>

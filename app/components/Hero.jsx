@@ -1,11 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import heroImage from "../../public/hero.png";
+import heroImage from "../../public/hero.jpeg";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-br from-amber-800 to-amber-950 pt-28 lg:pt-12 text-white overflow-hidden min-h-[85vh] flex items-center">
+    <section className="relative bg-gradient-to-br from-amber-800 to-amber-950 pt-28 lg:pt-12 text-white overflow-hidden min-h-[95vh] flex items-center">
       {/* Background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-64 h-64 bg-amber-600 rounded-full mix-blend-multiply filter blur-3xl"></div>
@@ -76,16 +76,9 @@ const HeroSection = () => {
                 }
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="bg-amber-500 hover:bg-amber-400 text-amber-900 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300 shadow-lg hover:shadow-amber-500/30 flex items-center gap-2"
+                className="bg-amber-700 hover:bg-amber-400 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300 shadow-lg hover:shadow-amber-500/30 flex items-center gap-2"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
-                </svg>
+               
                 Revive Your Leather
                 <motion.div
                   animate={{
@@ -128,12 +121,12 @@ const HeroSection = () => {
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            <motion.div className="relative rounded-2xl  w-full h-[420px] lg:h-[500px]">
+            <motion.div className="relative w-full h-[420px] lg:h-[500px]">
               <Image
                 src={heroImage}
                 alt="Leather CPR Cleaner & Conditioner - Restores and protects leather furniture, car seats, jackets and more"
                 fill
-                className="object-contain"
+                className="object-contain "
                 priority
                 sizes="(max-width: 768px) 90vw, 50vw"
               />

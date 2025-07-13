@@ -2,6 +2,13 @@
 import { motion } from "framer-motion";
 
 const CTA = () => {
+    const handleNavClick = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      
+    }
+  };
  
 
   return (
@@ -44,6 +51,7 @@ const CTA = () => {
             </motion.p>
             
             <motion.button
+               onClick={() => handleNavClick("products")}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}

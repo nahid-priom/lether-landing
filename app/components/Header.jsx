@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import logo from "../../public/CPR.png";
+import Link from "next/link";
 
 const navItems = [
   { label: "Products", id: "products" },
@@ -50,16 +51,18 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Image 
-              src={logo} 
-              alt="Leather CPR Logo" 
-              width={200} 
-              height={80}
-              className={`transition-all duration-300 ${
-                scrolled ? "h-10 lg:h-20 w-auto" : "h-12 lg:h-24 w-auto"
-              }`}
-              priority
-            />
+            <Link href="/">
+              <Image
+                src={logo}
+                alt="Leather CPR Logo"
+                width={200}
+                height={80}
+                className={`transition-all duration-300 ${
+                  scrolled ? "h-10 lg:h-20 w-auto" : "h-12 lg:h-24 w-auto"
+                }`}
+                priority
+              />
+            </Link>
           </div>
 
           {/* Desktop Nav */}

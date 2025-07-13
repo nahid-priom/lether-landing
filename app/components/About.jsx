@@ -1,9 +1,16 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import aboutImg from "../../public/about.jpg";
+import aboutImg from "../../public/about.jpeg";
 
 const AboutLeatherCPR = () => {
+    const handleNavClick = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+     
+    }
+  };
   return (
     <section id="leather-cpr" className="relative py-16 lg:py-24 bg-gradient-to-b from-white to-amber-50 overflow-hidden">
       {/* Decorative elements */}
@@ -95,6 +102,7 @@ const AboutLeatherCPR = () => {
             </div>
 
             <motion.button
+             onClick={() => handleNavClick("how-it-works")}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -123,12 +131,12 @@ const AboutLeatherCPR = () => {
             viewport={{ once: true }}
             className="w-full lg:w-1/2 flex justify-center order-1 lg:order-2 mb-8 lg:mb-0"
           >
-            <div className="relative w-full max-w-lg aspect-square md:aspect-[5/5] rounded-2xl md:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl group">
+            <div className="relative w-full max-w-3xl aspect-[5/4] rounded-2xl md:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl group">
               <Image
                 src={aboutImg}
-                alt="Leather CPR restoring a leather couch"
+                alt="Bring Your Leather Back to Life!"
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                className="object-fill group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
