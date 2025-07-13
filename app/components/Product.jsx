@@ -14,7 +14,7 @@ const products = [
       "Keep your leather looking its best with Leather CPR Cleaner & Conditioner! This all-in-one solution cleans, restores, and protects everything from your favorite leather couch to handbags, car seats, jackets, and boots. Its gentle formula is safe for all types of leather, making it perfect for quick touch-ups or regular care. Just apply, wipe, and watch your leather stay soft, clean, and protected from dirt and scratches. Whether it's your sofa, shoes, or saddle, Leather CPR makes leather care easy and keeps your items looking like new!",
     highlight: "Bestseller",
     image: p1,
-    amazonUrl: "https://www.amazon.com/dp/B00GRT125A?",
+    amazonUrl: "https://www.amazon.com//dp/B00GRT125A",
   },
   {
     name: "Leather CPR Cleaner and Conditioner Kit",
@@ -23,7 +23,7 @@ const products = [
       "Keep your favorite leather items looking brand new with the Leather CPR Cleaner and Conditioner Kit! This 18oz cleaner and 22oz heavy-duty formula work together to gently clean and hydrate leather furniture, car seats, purses, shoes, jackets, and saddles. Made with safe, cosmetic-grade ingredients, it's tough on dirt but gentle on your leather and skin. Simply apply and wipe to restore softness and shine, whether you're refreshing a leather sofa, polishing boots, or caring for a cherished handbag.",
     highlight: "Most Popular",
     image: p2,
-    amazonUrl: "https://www.amazon.com/dp/B0DCLSP981?",
+    amazonUrl: "https://www.amazon.com/dp/B0DCLSP981",
   },
   {
     name: "Leather CPR Microfiber Applicator Sponge",
@@ -32,7 +32,7 @@ const products = [
       "Make leather care a breeze with the Leather CPR Microfiber Applicator Sponge! This 5-inch round, lint-free microfiber pad is your go-to for applying leather cleaners and conditioners smoothly on car seats, furniture, purses, and more. Its soft, scratch-free design ensures your leather stays pristine while covering large surfaces quickly and evenly. With a handy finger pocket for better grip, it's easy to use and clean, plus it's washable and reusable for long-lasting value. Perfect for anyone who loves keeping their leather looking flawless!",
     highlight: "Essential Tool",
     image: p3,
-    amazonUrl: "https://www.amazon.com/dp/B0B9ZP4S4B?",
+    amazonUrl: "https://www.amazon.com/dp/B0B9ZP4S4B/",
   },
 ];
 
