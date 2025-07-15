@@ -1,15 +1,16 @@
-// app/layout.tsx
+// app/layout.js
 
 import './globals.css'
-import { Metadata } from 'next'
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Premium Leather Cleaner & Conditioner for Furniture & Accessories',
-  description: 'Restore the shine and softness of your leather furniture, purses, couches, and shoes with our premium leather cleaner and conditioner. Long-lasting care for all leather surfaces.',
+  description:
+    'Restore the shine and softness of your leather furniture, purses, couches, and shoes with our premium leather cleaner and conditioner. Long-lasting care for all leather surfaces.',
   metadataBase: new URL('https://www.leathercleanerpro.com'),
   openGraph: {
     title: 'Premium Leather Cleaner & Conditioner for Furniture & Accessories',
-    description: 'Restore the shine and softness of your leather furniture, purses, couches, and shoes with our premium leather cleaner and conditioner.',
+    description:
+      'Restore the shine and softness of your leather furniture, purses, couches, and shoes with our premium leather cleaner and conditioner.',
     url: 'https://www.leathercleanerpro.com',
     siteName: 'Leather Cleaner Pro',
     type: 'website',
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   themeColor: '#ffffff',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
