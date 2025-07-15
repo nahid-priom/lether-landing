@@ -31,6 +31,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           name="keywords"
           content="leather cleaner, leather conditioner, couch leather cleaner, leather purse conditioner, leather care, professional leather cleaner, leather furniture cleaner"
         />
+        <meta
+          name="google-site-verification"
+          content="7iXbjMfRv6bm70ZifhALUeNkezZlw0rucV0lJuYURcs"
+        />
       </head>
       <body className="font-sans bg-white text-gray-800">
         {children}
